@@ -25,29 +25,14 @@ const personGenerator = {
         "list": {     
             "id_1": "Александр",
             "id_2": "Максим",
-            "id_3": "Алексей",
+            "id_3": "Семен",
             "id_4": "Артем",
-            "id_5": "Дмитрий",
-            "id_6": "Никита",
+            "id_5": "Олег",
+            "id_6": "Владимир",
             "id_7": "Михаил",
             "id_8": "Даниил",
             "id_9": "Егор",
-            "id_10": "Андрей"
-        }
-    }`,
-    patronymicMaleJson: `{
-        "count": 10,
-        "list": {     
-            "id_1": "Александрович",
-            "id_2": "Максимович",
-            "id_3": "Алексеевич",
-            "id_4": "Артемович",
-            "id_5": "Дмитриевич",
-            "id_6": "Никитович",
-            "id_7": "Михаилович",
-            "id_8": "Данилович",
-            "id_9": "Егорович",
-            "id_10": "Андреевич"
+            "id_10": "Виктор"
         }
     }`,
     firstNameFemaleJson: `{
@@ -63,21 +48,6 @@ const personGenerator = {
             "id_8": "Полина",
             "id_9": "Ксения",
             "id_10": "Ева"
-        }
-    }`,
-    patronymicFemaleJson: `{
-        "count": 10,
-        "list": {     
-            "id_1": "Александровна",
-            "id_2": "Максимовна",
-            "id_3": "Алексеевна",
-            "id_4": "Артемовна",
-            "id_5": "Дмитриевна",
-            "id_6": "Никитична",
-            "id_7": "Михайловна",
-            "id_8": "Даниловна",
-            "id_9": "Егоровна",
-            "id_10": "Андреевна"
         }
     }`,
     professionMaleJson: `{
@@ -162,9 +132,9 @@ const personGenerator = {
 
     randomPatronymic: function(gender) {
         if(gender === this.GENDER_MALE){
-            return this.randomValue(this.patronymicMaleJson);
+            return this.randomValue(this.firstNameMaleJson) + 'ович';
         } else{
-            return this.randomValue(this.patronymicFemaleJson);
+            return this.randomValue(this.firstNameMaleJson) + 'овна';
         }
     },
 
